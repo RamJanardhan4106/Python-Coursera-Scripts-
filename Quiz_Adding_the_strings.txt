@@ -10,7 +10,7 @@ def group_list(group, users):
     
     # Slicing the last two characters of the string to get the output
     
-    return members[:-2]
+    return members[:-3]
     
     
 
