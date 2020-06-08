@@ -1,0 +1,25 @@
+def checkout():
+    filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+    # new list which only contains .hpp extensions 
+    new_filenames = []
+    for x in filenames:
+      #Checking if file name is having hpp extension or not 
+        if x.endswith("hpp") == True:
+            # Finds the index of "."
+            spot_index = x.find('.')
+      # Strips off the characteres after "."
+            stripoff = x[:spot_index+1]
+      # Add hpp as the extension 
+            stripoff += "h"
+      # Updates the new_filenames with the modified extensions 
+            new_filenames.append(stripoff)
+            
+      # If the file name is not having hpp extension 
+        else:
+            new_filenames.append(x)
+      
+            
+            
+    return new_filenames
+
+print (checkout()) 

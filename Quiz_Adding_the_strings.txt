@@ -1,0 +1,19 @@
+def group_list(group, users):
+    # Add the group name with ":"
+    members = group + ": "
+    # Iterates from 0 to length of the "users"
+    for x in range(0,len(users)):
+        # Adds members with subsequent element in the users list 
+        
+        members += users[x] + ", "
+        
+    
+    # Slicing the last two characters of the string to get the output
+    
+    return members[:-2]
+    
+    
+
+print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"])) # Should be "Marketing: Mike, Karen, Jake, Tasha"
+print(group_list("Engineering", ["Kim", "Jay", "Tom"])) # Should be "Engineering: Kim, Jay, Tom"
+print(group_list("Users", "")) # Should be "Users:"
